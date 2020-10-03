@@ -1,3 +1,8 @@
+/**
+ * @author Laurent Yu A3
+ * 03/10/2020
+ * Part 3
+ */
 package fr.isep.tp_1_chat;
 
 import javax.swing.*;
@@ -5,6 +10,10 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
 import java.net.*;
+
+/**
+ * Class My class contains the interface from Moodle
+ */
 public class MyChat {
     public JTextField jTextField;
     public JTextArea jTextArea;
@@ -57,6 +66,8 @@ public class MyChat {
         );
 
         f.setVisible(true);
+
+        // Here we create a thread in order to have a reader for the chat
         new Thread(new ReaderChatClient(reader, jTextArea)).start();
         f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }

@@ -1,9 +1,17 @@
+/**
+ * @author Laurent Yu A3
+ * 03/10/2020
+ * Part 3 Server
+ */
 package fr.isep.tp_1_chat;
 import java.io.*;
 import java.net.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class server that link people
+ */
 class Server implements Runnable{
     private static List<Socket> connectionsSockets = new ArrayList<>();
     private Socket selfSocket;

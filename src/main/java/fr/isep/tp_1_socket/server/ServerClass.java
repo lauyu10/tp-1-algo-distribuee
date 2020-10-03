@@ -1,3 +1,8 @@
+/**
+ * @author Laurent Yu A3
+ * 03/10/2020
+ * Part 1-1 Server
+ */
 package fr.isep.tp_1_socket.server;
 
 import java.io.BufferedReader;

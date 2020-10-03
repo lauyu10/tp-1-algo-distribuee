@@ -1,3 +1,8 @@
+/**
+ * @author Laurent Yu A3
+ * 03/10/2020
+ * Part 2
+ */
 package fr.isep.tp_1_thread.server;
 
 import java.io.*;
