@@ -15,19 +15,17 @@ import java.util.List;
 class Server implements Runnable{
     private static List<Socket> connectionsSockets = new ArrayList<>();
     private Socket selfSocket;
-    public Server(Socket s){
+    public Server(Socket socket){
         try{
             System.out.println("Client Got Connected  " );
-            selfSocket = s;
-            connectionsSockets.add(s);
+            selfSocket = socket;
+            connectionsSockets.add(socket);
         }catch(Exception e){e.printStackTrace();}
     }
     public void run(){
         try{
             BufferedReader reader =
                     new BufferedReader(new InputStreamReader(selfSocket.getInputStream()));
-            BufferedWriter writer=
-                    new BufferedWriter(new OutputStreamWriter(selfSocket.getOutputStream()));
             while(true){
                 String data1 = reader.readLine().trim();
                 connectionsSockets.forEach(socket ->
